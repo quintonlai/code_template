@@ -8,4 +8,4 @@ def hist_plot(df_name, var, title_txt, xlab_txt, ylab_txt, bar_color):
     plt.hist(df_name[var], color = bar_color)
     
 #Example
-#hist_plot('Distance', 'Distance', 'km', 'Frequency')
+#hist_plot(zwift_test_ds, 'Distance', 'Distance', 'km', 'Frequency', 'Blue')
