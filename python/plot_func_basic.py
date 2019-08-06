@@ -31,3 +31,36 @@ def treemap(df_name, color_var, grp_var, title_txt):
     plt.axis('off')
     plt.title(title_txt)
     plt.show()
+
+'''
+# Parameters
+hist_plot
+    df_name = Data frame name
+    var = variable to plot
+    xlab_txt = X axis label text
+    ylab_txt = Y axis label text
+    bar_color = Histogram bar color
+    title_txt = Title
+
+ corr_matrix
+    df_name = Data frame name
+    coef_method = method : {‘pearson’, ‘kendall’, ‘spearman’} or callable
+    color_map = Color style
+    size = Size of plot area
+    width = Max. chart width
+    font_size = Font size
+    decimal_place = Decimal place of correlation coefficient
+    title_txt = Title
+    
+treemap
+    df_name = Data frame name
+    color_var = variable to determine the depth
+    grp_var = Grouping variable
+    title_txt = Title
+    
+# Example
+hist_plot(zwift_test_ds, 'Distance', 'km', 'Frequency', 'Blue', 'Distance')
+corr_matrix(zwift_test_ds, 'Pearson', 'coolwarm', 10, '1000px', '5pt', 2, "Correlation matrix")
+treemap(garmin_test_ds, 'Calories', 'Activity Type', 'Tree map')
+
+'''
