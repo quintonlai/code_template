@@ -4,7 +4,8 @@ import seaborn as sns
 import squarify
 
 # Output style for notebook
-%matplotlib notebook
+#%matplotlib notebook
+#%matplotlib inline
 
 # Histogram
 def hist_plot(df_name, var, xlab_txt, ylab_txt, bar_color, title_txt):
@@ -21,6 +22,7 @@ def corr_matrix(df_name, coef_method, color_map, size, width, font_size, decimal
         .set_precision(decimal_place)\
         .set_properties({'max-width': width, 'font-size': font_size})\
         .set_precision(decimal_place)
+    plt.ioff()
     plt.figure(figsize = (size, size))
     plt.title(title_txt)
     sns.heatmap(corr, mask = np.zeros_like(corr, dtype=np.bool),
@@ -28,6 +30,7 @@ def corr_matrix(df_name, coef_method, color_map, size, width, font_size, decimal
     
 def treemap(df_name, color_var, grp_var, title_txt):
     squarify.plot(sizes = df_name[color_var], label=df_name[grp_var], alpha=.6)
+    plt.ioff()
     plt.axis('off')
     plt.title(title_txt)
     plt.show()
