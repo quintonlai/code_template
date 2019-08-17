@@ -16,3 +16,5 @@ The phases of SEMMA and related tasks are the following
 |               | plot_func_basic.py | (Explore) Visualization techniques with matplotlib |
 |               | data_cleaning.py   | (Modify) Data cleaning techniques |
 |               | data_transform.py  | (Modify) Data transformation techniques |
+|               | regression.py      | (Model) Regression model |
+|               | time_series.py     | (Model) Time series model |
