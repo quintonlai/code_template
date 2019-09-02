@@ -14,7 +14,9 @@ The phases of SEMMA and related tasks are the following
 | python        | data_proc.py       | (Sample) Data sampling techniques, incl. data partitioning |
 |               | desc_stat.py       | (Explore) Frequently used descriptive statistics |
 |               | plot_func_basic.py | (Explore) Visualization techniques with matplotlib |
+|               | data_explore.py    | (Explore) Common data exploration visualization |
 |               | data_cleaning.py   | (Modify) Data cleaning techniques |
 |               | data_transform.py  | (Modify) Data transformation techniques |
 |               | regression.py      | (Model) Regression model |
 |               | time_series.py     | (Model) Time series model |
+
