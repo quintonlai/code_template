@@ -18,3 +18,12 @@ print(X_test.shape)
 def chk_null_df(df_name):
     print('Percentage of missing value in the dataframe')
     print(df_name.isnull().sum()/df_name.shape[0]*100, '\n')
+    
+def convert_date_to_yyyymm(df_name):
+    df_name[['mm', 'dd', 'yyyy']] = df_name['Date'].str.split('/', expand = True)
+    df_name['mm'] = df_name['mm'].apply(lambda z: '{0:0>2}'.format(z))
+    df_name['dd'] = df_name['dd'].apply(lambda z: '{0:0>2}'.format(z))
+    df_name['yyyymm'] = df_name['yyyy'] + df_name['mm']
+    del df_name['yyyy']
+    del df_name['mm']
+    del df_name['dd']
