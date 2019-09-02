@@ -47,6 +47,3 @@ def reg_coeff_out(X, reg_model):
 # Example
 reg_model_perf(y_train, yhat_train_linear, 'Training performance (Linear regression)')
 reg_coeff_out(X_temp, linear_fit)
-
-
-reg_coeff_out(X_temp, linear_fit)
