@@ -13,3 +13,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 print(X_train.shape)
 print(X_test.shape)
+
+# Check missing values
+def chk_null_df(df_name):
+    print('Percentage of missing value in the dataframe')
+    print(df_name.isnull().sum()/df_name.shape[0]*100, '\n')
