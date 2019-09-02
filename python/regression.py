@@ -8,16 +8,20 @@ from math import sqrt
 
 # Regression model evalution
 def reg_model_perf(y_set, yhat_set, title_txt):
-
-    ess = metrics.explained_variance_score(y_set, yhat_set)
+    
+    tss = np.sum((y_set - np.mean(yhat_set))**2)
+    rss = np.sum((yhat_set - y_set)**2)
+    ess = tss - rss
     mse = metrics.mean_squared_error(y_set, yhat_set) 
     mae = metrics.mean_absolute_error(y_set, yhat_set) 
     med_absolute_error = metrics.median_absolute_error(y_set, yhat_set)
     r_sq = metrics.r2_score(y_set, yhat_set)
     
     print(title_txt)
-    print('R-Square: ', r_sq,)
+    print('Total SS: ', tss)
     print('Explained SS: ', ess)
+    print('Residual SS: ', rss)
+    print('R-Square: ', r_sq,)
     print('MSE: ', mse)
     print('RMSE: ', np.sqrt(mse))
     print('Mean Absolute Error: ', mae)
