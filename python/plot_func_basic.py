@@ -17,6 +17,7 @@ def hist_plot(df_name, var, xlab_txt, ylab_txt, bar_color, title_txt):
 
 # Basic scatter plot
 def scatter_plt_basic(df_name, xvar, yvar, dot_size, title_txt):
+    fig = plt.figure()
     plt.scatter(df_name[xvar], df_name[yvar], s = dot_size)
     plt.ioff()
     plt.title(title_txt)
