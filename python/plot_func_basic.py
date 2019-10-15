@@ -14,6 +14,12 @@ def hist_plot(df_name, var, xlab_txt, ylab_txt, bar_color, title_txt):
     plt.xlabel(xlab_txt)
     plt.ylabel(ylab_txt)
     plt.hist(df_name[var], color = bar_color)
+
+# Basic scatter plot
+def scatter_plt_basic(df_name, xvar, yvar, dot_size, title_txt):
+    plt.scatter(df_name[xvar], df_name[yvar], s = dot_size)
+    plt.ioff()
+    plt.title(title_txt)
     
 # Correlation matrix
 def corr_matrix(df_name, coef_method, color_map, size, width, font_size, decimal_place, title_txt):
@@ -34,6 +40,10 @@ def treemap(df_name, color_var, grp_var, title_txt):
     plt.axis('off')
     plt.title(title_txt)
     plt.show()
+    
+
+
+
 
 '''
 # Parameters
@@ -43,6 +53,13 @@ hist_plot
     xlab_txt = X axis label text
     ylab_txt = Y axis label text
     bar_color = Histogram bar color
+    title_txt = Title
+    
+scatter_plt_basic
+    df_name = Data frame name
+    x = x variable
+    y = y variable
+    dot_size = size of dots (variable allowed)
     title_txt = Title
 
  corr_matrix
@@ -65,5 +82,6 @@ treemap
 hist_plot(zwift_test_ds, 'Distance', 'km', 'Frequency', 'Blue', 'Distance')
 corr_matrix(zwift_test_ds, 'Pearson', 'coolwarm', 10, '1000px', '5pt', 2, "Correlation matrix")
 treemap(garmin_test_ds, 'Calories', 'Activity Type', 'Tree map')
+scatter_plt_basic(raw_ds, 'x', 'y', 30, 'Relationship between Total words in posts vs Total words in replies')
 
 '''
